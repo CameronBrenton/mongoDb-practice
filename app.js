@@ -22,6 +22,8 @@ con.on('open', () => {
   console.log('MongoDB connection opened');
 });
 
+app.use(express.json());
+
 const countriesRouter = require('./routes/countries');
 app.use('/countries', countriesRouter);
 
